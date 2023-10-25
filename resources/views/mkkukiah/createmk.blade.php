@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Tambah Mahasiswa')
+@section('title', 'Tambah Mata Kuliah')
 
 @section('breadcrumb')
     <li class="breadcrumb-item"><a href="{{ url('/mk') }}">Mata Kuliah</a></li>
@@ -29,7 +29,8 @@
                     <label class="form-label">Jurusan</label>
                     <select class="form-select" name="jurusan">
                         <option value="1">TI</option>
-                        <option value="2">Sistem Komputer</option>
+                        <option value="2">SK</option>
+                        <option value="3">DGM</option>
                     </select>
                 </div>
 
