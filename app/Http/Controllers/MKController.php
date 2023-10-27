@@ -8,30 +8,26 @@ class MKController extends Controller
 {
     private $mk = [
         [
-            'idmk' => "123456",
-            'namamk' => "Web Programming",
-            'jurusan' => "Komputer",
+            'kodemk' => "123456",
+            'namamk' => "Network and Infrastructure",
+            'jurusan' => "TI",
         ],
         [
-            'nim' => "234567",
-            'nama' => "Object Oriented Programming",
-            'jurusan' => "Sistem Komputer",
+            'kodemk' => "234567",
+            'namamk' => "Digital Image Processing",
+            'jurusan' => "TI",
         ],
-        [
-            'nim' => "345678",
-            'nama' => "Network",
-            'jurusan' => "Sistem Komputer",
-        ],
+
     ];
 
     public function index()
     {
-        return view('mk.index', ['data' => $this-> mk]);
+        return view('mk.indexmk', ['mk' => $this->mk]);
     }
 
     public function create()
     {
-        return view('mk.create');
+        return view('mk.createmk');
     }
 
     public function show($id)
