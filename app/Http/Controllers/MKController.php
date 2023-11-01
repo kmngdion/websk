@@ -8,15 +8,26 @@ class MKController extends Controller
 {
     private $mk = [
         [
-            'kodemk' => "123456",
+            'kodemk' => "001",
             'namamk' => "Network and Infrastructure",
-            'jurusan' => "TI",
+            'jurusan' => "SK",
         ],
         [
-            'kodemk' => "234567",
+            'kodemk' => "002",
             'namamk' => "Digital Image Processing",
-            'jurusan' => "TI",
+            'jurusan' => "SK",
         ],
+        [
+            'kodemk' => "003",
+            'namamk' => "Web Programming",
+            'jurusan' => "SK",
+        ],
+        [
+            'kodemk' => "004",
+            'namamk' => "Object Oriented Programming",
+            'jurusan' => "SK",
+        ],
+
 
     ];
 

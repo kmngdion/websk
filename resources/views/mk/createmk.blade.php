@@ -18,18 +18,19 @@
             <div class="card-body">
                 @csrf
                 <div>
-                    <label class="form-label">NIM</label>
+                    <label class="form-label"><b>NIM</b></label>
                     <input class="form-control" type="text" name="nim">
                 </div>
                 <div>
-                    <label class="form-label">Nama</label>
+                    <label class="form-label"><b>Nama</b></label>
                     <input class="form-control" type="text" name="nama">
                 </div>
                 <div>
-                    <label class="form-label">Mata Kuliah Tambahan</label>
+                    <label class="form-label"><b>Mata Kuliah Tambahan</b></label>
                     <select class="form-select" name="jurusan">
-                        <option value="1">Web Programming</option>
-                        <option value="2">Object Oriented Programming</option>
+                        <option value="1">Sensor and Tranduser</option>
+                        <option value="2">Microprocessor</option>
+                        <option value="3">Cloud Tecnology</option>
                     </select>
                 </div>
 

@@ -3,7 +3,7 @@
 @section('title', 'Mata Kuliah')
 
 @section('breadcrumb')
-    <li class="breadcrumb-item active">Mata Kuliah</li>
+    <li class="breadcrumb-item active">Tabel Mata Kuliah</li>
 @endsection
 
 @section('content')
@@ -22,8 +22,8 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Kode Mata Kuliah</th>
-                        <th scope="col">Nama Mata Kuliah</th>
+                        <th scope="col">Kode Matakuliah</th>
+                        <th scope="col">Nama Matakuliah</th>
                         <th scope="col">Jurusan</th>
                         <th scope="col"></th>
                     </tr>
@@ -34,8 +34,12 @@
                             <td>{{ $d['kodemk'] }}</td>
                             <td>{{ $d['namamk'] }}</td>
                             <td>{{ $d['jurusan'] }}</td>
-                            <td class="float-end">                     
-                            </tr>
+                            <td class="float-end">
+                                <a class="btn btn-sm btn-warning"
+                                    href="{{ url('/mk/' . $loop->index . '/edit') }}">Ubah</a>
+                                <button class="btn btn-sm btn-danger">Hapus</button>
+                            </td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>
