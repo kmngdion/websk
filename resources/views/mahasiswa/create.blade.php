@@ -3,7 +3,7 @@
 @section('title', 'Tambah Mahasiswa')
 
 @section('breadcrumb')
-    <li class="breadcrumb-item"><a href="{{ url('/mk') }}">Mata Kuliah</a></li>
+    <li class="breadcrumb-item"><a href="{{ url('/mahasiswa') }}">Mahasiswah</a></li>
     <li class="breadcrumb-item active">Tambah</li>
 @endsection
 
@@ -11,10 +11,10 @@
     <div class="card">
         <div class="card-header">
             <div class="row">
-                <h4 class="card-title">Form Tambah Mata Kuliah</h4>
+                <h4 class="card-title">Form Tambah Mahasiswa</h4>
             </div>
         </div>
-        <form action="{{ url('/mk') }}" method="POST">
+        <form action="{{ url('/mahasiswa') }}" method="POST">
             <div class="card-body">
                 @csrf
                 <div>

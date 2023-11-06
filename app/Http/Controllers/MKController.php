@@ -2,38 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class MKController extends Controller
 {
-    private $mk = [
-        [
-            'kodemk' => "001",
-            'namamk' => "Network and Infrastructure",
-            'jurusan' => "SK",
-        ],
-        [
-            'kodemk' => "002",
-            'namamk' => "Digital Image Processing",
-            'jurusan' => "SK",
-        ],
-        [
-            'kodemk' => "003",
-            'namamk' => "Web Programming",
-            'jurusan' => "SK",
-        ],
-        [
-            'kodemk' => "004",
-            'namamk' => "Object Oriented Programming",
-            'jurusan' => "SK",
-        ],
 
-
-    ];
 
     public function index()
     {
-        return view('mk.indexmk', ['mk' => $this->mk]);
+        $mk = DB::table ('mk')
+        ->select("mk.idmk", "mk.namamk", "jurusan_id", "jurusan.nama AS jurusan_nama")
+        ->join("jurusan", "jurusan.id", '=', "mk.jurusan_id")
+        ->get();
+        
+        return view('mk.indexmk', ['mk' => $mk]);
     }
 
     public function create()

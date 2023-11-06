@@ -22,7 +22,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Kode Matakuliah</th>
+                        <th scope="col">Id Matakuliah</th>
                         <th scope="col">Nama Matakuliah</th>
                         <th scope="col">Jurusan</th>
                         <th scope="col"></th>
@@ -31,12 +31,12 @@
                 <tbody>
                     @foreach ($mk as $d)
                         <tr>
-                            <td>{{ $d['kodemk'] }}</td>
-                            <td>{{ $d['namamk'] }}</td>
-                            <td>{{ $d['jurusan'] }}</td>
+                            <td>{{ $d->idmk }}</td>
+                            <td>{{ $d->namamk }}</td>
+                            <td>{{ $d->jurusan_nama }}</td>
                             <td class="float-end">
                                 <a class="btn btn-sm btn-warning"
-                                    href="{{ url('/mk/' . $loop->index . '/edit') }}">Ubah</a>
+                                    href="{{ url('/mk/' . $d->idmk . '/edit') }}">Ubah</a>
                                 <button class="btn btn-sm btn-danger">Hapus</button>
                             </td>
                         </tr>

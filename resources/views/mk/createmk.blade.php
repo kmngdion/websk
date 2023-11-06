@@ -18,15 +18,15 @@
             <div class="card-body">
                 @csrf
                 <div>
-                    <label class="form-label"><b>NIM</b></label>
+                    <label class="form-label"><b>Id Nama Kuliah</b></label>
                     <input class="form-control" type="text" name="nim">
                 </div>
                 <div>
-                    <label class="form-label"><b>Nama</b></label>
+                    <label class="form-label"><b>Nama Mata Kuliah</b></label>
                     <input class="form-control" type="text" name="nama">
                 </div>
                 <div>
-                    <label class="form-label"><b>Mata Kuliah Tambahan</b></label>
+                    <label class="form-label"><b>Jurusan</b></label>
                     <select class="form-select" name="jurusan">
                         <option value="1">Sensor and Tranduser</option>
                         <option value="2">Microprocessor</option>
