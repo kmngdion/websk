@@ -37,7 +37,12 @@
                             <td class="float-end">
                                 <a class="btn btn-sm btn-warning"
                                     href="{{ url('/mahasiswa/' . $d->id . '/edit') }}">Ubah</a>
+                                
+                            <form style="display: inline;"action ="{{ url('/mk/' . $d->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
                                 <button class="btn btn-sm btn-danger">Hapus</button>
+                            </form>   
                             </td>
                         </tr>
                     @endforeach

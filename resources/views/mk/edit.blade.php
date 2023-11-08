@@ -29,7 +29,8 @@
                 <div>
                     <label class="form-label">Jurusan</label>
                     <select class="form-select" name="jurusan">
-                        <option {{ $mk->jurusan_id == $jurusan->id ? 'selected' : '' }} value="{{$jurusan->id}}">{{$jurusan->nama}}</option>
+                        @foreach ($jurusan as $j)
+                            <option {{ $mk->jurusan_id == $j->id ?'selected' : ''}} value ="{{ $j->id}}"> {{ $j->nama}}</option>
                         @endforeach
                     </select>
                 </div>
